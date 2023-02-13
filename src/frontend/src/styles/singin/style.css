@@ -1,0 +1,202 @@
+
+
+
+
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body,html {
+    margin: 0;
+    padding: 0;
+    background: #FFF7F7;
+}
+
+#logo-grande{
+    width: 220px;
+}
+
+#send-to-singup {
+    margin-top: 1rem;
+    color: #DD6044;
+}
+
+main {
+    flex:1;
+    text-align: center;
+    max-width: 426px;
+    width: 100%;
+    margin: auto;
+}
+
+.logo {
+    margin-bottom: 25px;
+}
+
+.container{
+    display: flex;
+    justify-content: right;
+}
+
+.banner{
+    display: flex;
+    height: 100vh;
+}
+
+
+.alygnlabel {
+    margin-right: 380px;
+    padding-bottom: 10px;
+}
+
+.loginstyle {
+
+    width: 100%;
+    height: 41px;
+    background: rgba(51, 53, 51, 0.1);
+    border-radius: 10px;
+    border: none;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+
+
+#email{
+    margin-bottom: 20px;
+}
+
+#buttonStyle {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 53px;
+    gap: 10px;
+    background: #DD6044;
+    border-radius: 10px;
+    border: none;
+    margin-top: 40px;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+
+}
+
+#buttonGoogle {
+ 
+    display: inline-flex;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+    height: 53px;
+    left: calc(50% - 426px/2 + 4.5px);
+    top: calc(50% - 53px/2 + 157.5px);
+    border: 3px solid #DD6044;
+    color: #DD6044;
+    border-radius: 10px;
+
+    background-color: #FFFFFC;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    cursor:pointer;
+    
+}
+
+.googleLogo {
+    width: 25px;
+    height: 25.47px; 
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin-top: 10px;
+}
+
+
+/* Responsive part */
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .banner {
+        display: none;
+    }
+    
+
+
+    body{
+        margin: 5px;
+    }
+
+    #buttonStyle{
+        text-align: center;
+        padding: 0px;
+    }
+
+    .login {
+        width: 100%;
+    }
+    
+
+}
+
+/* Medium devices (landscape tablets) */
+@media only screen and (max-width: 768px) {
+    .banner {
+        display:none;
+    }
+}
+
+/* Large devices (laptops/desktops) */
+@media only screen and (max-width: 992px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .banner {
+        display: none;
+    }
+
+
+    body{
+        margin: 5px;
+    }
+
+    #buttonStyle{
+        text-align: center;
+        padding: 0px;
+    }
+
+    .login {
+        width: 100%;;
+    }
+    
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+
+    .banner{
+        display: none;
+    }
+
+}
+
+

@@ -1,0 +1,104 @@
+#openModal {
+    background-color: #87C47D;
+    cursor: pointer;
+    transition: 0.4s;
+    opacity: 0.8;
+  }
+  
+  button:hover {
+    opacity: 1;
+  }
+  
+  #fade,
+  #modal {
+    transition: .5s;
+    opacity: 1;
+    pointer-events: all;
+  }
+  
+  #fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+  }
+  
+  #modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    z-index: 10;
+    width: 700px;
+    max-width: 90%;
+    padding: 1.2rem;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .modalHeader {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  
+  #modalBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  #pMonetario {
+    align-items: center;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  #pMaterial {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  #modal.hide,
+  #fade.hide {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  #modal.hide {
+    top: 0;
+  }
+  
+  .modalHeader > button {
+    max-width: 20%;
+  }
+  
+  .loginstyle {
+  
+    width: 100%;
+    height: 41px;
+    background: rgba(51, 53, 51, 0.1);
+    border-radius: 10px;
+    border: none;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+  
+  #modal {
+    display: flex;
+    flex-direction: column;
+  }

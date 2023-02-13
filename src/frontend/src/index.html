@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/singin/style.css">
+    <title>Login | RevoAPP</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+</head>
+
+<body class="container">
+
+    <main>
+        <img id="logo-grande" src="./assets/logo_grande.png" alt="logo" class="logo">
+        <h2>Seja bem vindo a festa!</h2>
+        <p>Por favor, insira seus dados.</p>
+
+        <div class="login">
+            <div class="alygnlabel">
+                <label for="email">Email:</label><br>
+            </div>
+            <form onsubmit="entrar(event)">
+                <input type="email" name="email" id="email" class="loginstyle"><br>
+                <div class="alygnlabel">
+                    <label for="senha">Senha:</label><br>
+                </div>
+
+                <input type="password" name="senha" id="senha" class="loginstyle"><br>
+
+                <input type="submit" value="Entrar" id="buttonStyle">
+
+                <p>------------------------------- ou -------------------------------</p>
+
+                <button id="buttonGoogle"><img src="./assets/googleLogo.png" alt="" class="googleLogo">
+                    <p>Entrar com Google</p>
+                </button>
+            </form>
+
+        </div>
+
+        <a href="./pages/singup.html" id="send-to-singup">Faça o seu cadastro</a>
+
+    </main>
+
+    <div class="container">
+        <img src="./assets/Fundo.png" alt="banner" class="banner">
+    </div>
+
+    <script src="./scripts/Login/index.js"></script>
+
+
+</body>
+
+</html>

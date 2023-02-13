@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br   ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../styles/events/index.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/events/modal.css" />
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/events/modal.css">
+    <title>Event | Revoapp</title>
+</head>
+
+<body onload="loadevent()">
+
+
+    <header>
+        <nav class="menu-container">
+            <div class="menu">
+
+                <a href="./home.html">
+
+                    <img src="../assets/Icon.png">
+                </a>
+
+                <a href="./user.html">
+                    <div class="UserInfo">
+                        <h2 class="username" id="username">DJ KEVIN</h2>
+                        <div>
+                            <span id="friend_number">
+                                32
+                            </span>
+                            <img src="../assets/Friends.png">
+                        </div>
+                    </div>
+
+                    <div class="ProfileP" href="/">
+                        <img src="../assets/Profile.png" href="/">
+                    </div>
+                </a>
+
+            </div>
+        </nav>
+    </header>
+
+    <!-- Div conteudo da pagina de Evento -->
+
+    <div class="img-container">
+        <div>
+            <img src="../assets/Event.jpg" href="/">
+
+            <h2 class="title" id="title">TOMORROWLAND</h2>
+            <p class="details" id="details">In 2022, Tomorrowland made its grand return to the beautiful and unique
+                scenery of De Schorre, welcoming more than 600,000 People of Tomorrow to celebrate together during 3
+                wonderful weekends of magic. The 16th edition of Tomorrowland revolved around a magnificent new tale
+                ‘The Reflection of Love’, symbolizing the positive energy the festival stands for. The whole world
+                united again in one magical place filled with energy and love, embracing the gift of life and reflecting
+                all that is positive from around the globe while enjoying mesmerizing performances of more than 800 of
+                the planet’s finest electronic artists, including Alesso, Amelie Lens, Armin van Buuren, Charlotte de
+                Witte, Dimitri Vegas & Like Mike, Diplo, Eric Prydz, Lost Frequencies, Marshmello, Martin Garrix, Paul
+                Kalkbrenner and many more…</p>
+
+            <div class="description">
+                <span id="hour"><b>HORÁRIO:</b> 18H</span>
+
+                <span id="place"><b>LOCAL:</b> BERLIM</span>
+            </div>
+            <div class="description">
+                <span id="contacts"><b>CONTÁTOS:</b> TOMORROWLAND.COM</span>
+
+                <span id="type"><b>TIPO:</b> PÚBLICA</span>
+            </div>
+            <div class="description">
+                <span id="date"><b>DATA:</b> 12/12/2032</span>
+
+                <span id="participants"><b>PARTICIPANTES:</b> 0</span>
+            </div>
+
+            <!-- Buttons ---------------------------------------------- -->
+            <div class="Buttons ">
+                <button class="Button" id="openInvite">
+                    <h2>CONVIDAR</h2>
+                    <img src="../assets/add_convidar.png">
+                </button>
+                <!-- ------------------------------------------------------ -->
+                <button class="Button" id="openModal">
+                    <h2>PATROCINAR EVENTO</h2>
+                </button>
+                <!-- ------------------------------------------------------ -->
+                <button class="Button" id="Presence" onclick="handleParticipate()">
+                    <h2>CONFIRMAR PRESENÇA</h2>
+                </button>
+            </div>
+
+            <!-- Modal Convidar Evento -->
+            <div id="fadeInvite" class="hideInvite"></div>
+            <div id="modalInvite" class="hideInvite" >
+
+                <div class="inviteHeader">
+                    <h3>PROCURE POR UM USUÁRIO: </h3>
+
+                    <div id="search-container">
+
+                        <form id="formInvite" onsubmit="PesquisaAmigo(event)">
+
+                            <div id="max-width">
+
+                                <input type="text" placeholder="nome do usuário..." id="search">
+
+                            </div>
+
+                        </form>
+
+                        <div class="inviteBody">
+                            <div class="friendsButtons" id="search-users"></div>
+                        </div>
+
+                    </div>
+                </div>
+                <h2 id="friends-title">Amigos</h2>
+                <div class="inviteBody">
+                    <div class="friendsButtons" id="search-friends"></div>
+                </div>
+
+            </div>
+            <!-- Fim Modal Convidar Evento -->
+
+            <!-- Modal Patrocinar Evento -->
+            <div id="fade" class="hide"></div>
+            <div id="modal" class="hide">
+
+                <div class="modalHeader">
+                    <h3>DIGITE AS INFORMAÇÕES PARA PATROCINAR:</h3>
+                    <button id="closeModal" class="Button">
+                        <h3>FECHAR</h3>
+                    </button>
+                </div>
+                <div id="metaModal">
+                    <h4 id="metaMonetaria">Meta monetária:</h4>
+                    <h4 id="metaMaterial">Meta material:</h4>
+                </div>
+                <div id="modalBody">
+                    <div id="pMonetario">
+                        <label for="">Monetário:</label>
+                        <input type="number" class="loginstyle" id="monetario">
+                    </div>
+                    <div id="pMaterial">
+                        <label for="">Material(Ex: item, item2, item3, ...):</label>
+                        <input type="text" class="loginstyle" id="material">
+                    </div>
+                </div>
+
+                <div id="modalFooter">
+                    <button class="Button" id="openModal" onclick="patrocinar()">
+                        <h2>PATROCINAR</h2>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Fim Modal Patrocinar -->
+
+        </div>
+
+        <script type="text/javascript" src="../scripts/Events/index.js"></script>
+
+</body>
+
+</html>

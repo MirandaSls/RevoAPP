@@ -1,0 +1,190 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --white: #FFFFFC;
+    --brown: #DD6044;
+    --grey: #333533;
+    --black: #0A0908;
+    --test: #000000;
+    --background: #FFF7F7;
+
+    --radius: 20px;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background);
+    margin-bottom: 1.5rem;
+}
+
+// -- Navbar
+
+.menu-container {
+    background: #FFFFFC;    
+    border-radius: 0px 0px 50px 50px;
+    filter: drop-shadow(0px 1px 6px rgba(0, 0, 0, 0.25));
+    
+    .menu{
+        max-width: 1200px;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        align-items: center;
+
+        >a {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            text-decoration: none;
+            color: var(--black);
+
+            .UserInfo {
+                display: flex;
+                flex-direction: column;
+                >div{
+                    gap: 0.2rem;
+                    display: flex;
+                    justify-content: flex-end;
+                    button{
+                        border: none;
+                        background-color: #FFFFFC;
+                        cursor: pointer;
+                        display: flex;
+                    }
+                }
+                .username{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+
+.max-width{
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    margin-top: 1.5rem;
+}
+
+#search-container {
+    width: 100%;
+    margin: auto;
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+
+    form{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+
+        > div{
+            display: flex;
+            max-width: 1000px;
+            width: 100%;
+
+            background-color: var(--white);
+
+            padding: 1rem;
+            border-radius: var(--radius);
+            gap: 1rem;
+
+            input {
+                flex: 1;
+                border: none;
+
+                &::placeholder{
+                    color: var(--brown);
+                    font-size: 1rem;
+                }
+
+            }
+
+            img{
+                cursor: pointer;
+            }
+        }
+
+        button {
+            cursor: pointer;
+
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 1rem;
+            
+            border: none;
+            border-radius: var(--radius);
+            background-color: var(--brown);
+            color: var(--white);
+            
+            transition: all 0.4s;
+
+            &:hover{
+                filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.25));
+            }
+ 
+        }
+    }
+}
+
+#event-container {
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    gap:1rem;
+    
+    section {
+        background-color: var(--white);
+        border-radius: var(--radius);
+        
+        a {
+            
+            max-width: 420px;
+            width: 100%;
+            color: var(--black);
+            text-decoration: none;
+            display: block;
+            
+            padding-bottom: 0.5rem;
+    
+            > img {
+                max-width: 420px;
+                width: 100%;
+                border-radius: var(--radius) var(--radius) 0 0;
+            }
+    
+            > div {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+    
+                padding: 1rem;
+    
+                > div{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    text-align: start;
+    
+                    gap: 2rem;
+                }
+            }            
+        }
+    }
+
+
+
+
+}

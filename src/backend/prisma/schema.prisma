@@ -1,0 +1,102 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id             String         @id @default(uuid())
+  email          String         @unique
+  name           String
+  password       String
+  birthday       DateTime?
+  friends        Friend[]
+  events         Event[]
+  sponsership    ReceviedGoal[]
+  notifications  Notification[]
+  participations Participant[]
+}
+
+model Notification {
+  id            String  @id @default(uuid())
+  message       String
+  accepte_route String?
+  recuse_route  String?
+  just_for_show Boolean
+  User          User?   @relation(fields: [userId], references: [id])
+  userId        String?
+}
+
+model Friend {
+  id       String @id @default(uuid())
+  name     String
+  userId   String
+  friendId String @default("unkown")
+  User     User   @relation(fields: [userId], references: [id])
+}
+
+model Event {
+  id            String         @id @default(uuid())
+  name          String
+  date          DateTime
+  description   String
+  public        Boolean
+  time          String
+  place         String         @default("Não informado")
+  authorId      String
+  cellphone     Int            @default(31000000)
+  participants  Participant[]
+  goals         Goal[]
+  recevied_goal ReceviedGoal[]
+  User          User           @relation(fields: [authorId], references: [id])
+}
+
+model Participant {
+  id        String  @id @default(uuid())
+  name      String
+  eventName String  @default("Evento")
+  userId    String
+  eventId   String?
+  Event     Event?  @relation(fields: [eventId], references: [id])
+  User      User    @relation(fields: [userId], references: [id])
+}
+
+model Goal {
+  id        String         @id @default(uuid())
+  money     Float
+  material  GoalMaterial[]
+  completed Boolean
+  event     Event?         @relation(fields: [eventId], references: [id])
+  eventId   String?
+}
+
+model ReceviedGoal {
+  id        String             @id @default(uuid())
+  money     Float
+  material  ReceviedMaterial[]
+  completed Boolean
+  eventId   String?
+  userId    String?
+  user      User?              @relation(fields: [userId], references: [id])
+  event     Event?             @relation(fields: [eventId], references: [id])
+}
+
+model GoalMaterial {
+  id            String  @id @default(uuid())
+  material_name String
+  goalId        String?
+  Goal          Goal?   @relation(fields: [goalId], references: [id])
+}
+
+model ReceviedMaterial {
+  id             String        @id @default(uuid())
+  material_name  String
+  receviedGoalId String?
+  ReceviedGoal   ReceviedGoal? @relation(fields: [receviedGoalId], references: [id])
+}

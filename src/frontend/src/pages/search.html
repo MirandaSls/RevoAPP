@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br   ">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"  href="../styles/search/index.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Search | Revoapp</title>
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+</head>
+
+
+
+<body onload="loadevent()">
+    <script type="text/javascript" src="../scripts/Events/index.js"></script>
+
+    <header>
+        <nav class="menu-container">
+            <div class="menu">
+               
+                <a href="./home.html">
+                    <img src="../assets/Icon.png" >
+                </a>
+
+                <a href="./user.html">
+                    <div class="UserInfo">
+                            <h2 class="username" id="username">DJ KEVIN</h2>
+                            <div>
+                                <span id="friends">
+                                    32
+                                </span>
+                                <img src="../assets/Friends.png">
+                            </div>
+                    </div>
+        
+                    <div class="ProfileP" href="/">                   
+                        <img src="../assets/Profile.png" href="/">
+                    </div>
+                </a>
+    
+            </div>
+        </nav>
+    </header>
+    
+    <main class="max-width"> 
+        <div id="search-container">
+        <form onsubmit="fazPesquisa(event)">
+          <div>
+            <input type="text" placeholder="Procurar evento..." id="pesquisa">
+            <img src="../assets/Search_icon.png"/>
+          </div>
+          <button type="submit">
+            Criar evento
+          </button>
+        </form>
+      </div> 
+      <div id="event-container">
+        <!-- Div insere eventos NÃO APAGA -->
+      </div>
+    </main>
+
+    <script src="../scripts/search/script.js"></script>
+</body>
+</html>

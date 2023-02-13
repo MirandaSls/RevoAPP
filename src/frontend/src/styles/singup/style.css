@@ -1,0 +1,181 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #FFF7F7;
+}
+
+h1{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+p{
+    font-size:large;
+}
+
+
+#send-to-singin {
+    margin-top: 10rem;
+    color: #DD6044;
+}
+
+.titulo{
+    margin: 30px;
+}
+
+.registro {
+    flex:1;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.logo {
+    margin: 30px;
+    width: 35%;
+    justify-content: center;
+    width: 220px;
+}
+
+.container{
+    display: flex;
+    justify-content: right;
+}
+
+.fundo{
+    display: flex;
+    width: 92%;
+    display: flex;
+    justify-content: right;
+    
+}
+
+
+.formulario{
+    margin-right: 380px;
+    padding-bottom: 10px;
+}
+
+.confSenha{
+    margin-left:79px;
+}
+
+.input {
+
+    width: 426px;
+    height: 41px;
+    background: rgba(51, 53, 51, 0.1);
+    border-radius: 10px;
+    border: none;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    padding-inline:10px ;
+}
+
+#email{
+    margin-bottom: 20px;
+}
+
+#nome{
+    margin-bottom: 20px;
+}
+
+#senha{
+    margin-bottom: 20px;
+}
+
+.botao {
+    justify-content: center;
+    align-items: center;
+    padding: 6px 190px;
+    width: 426px;
+    height: 53px;
+    gap: 10px;
+    background: #DD6044;
+    border-radius: 10px;
+    border: none;
+    margin-top: 40px;
+    color: white;
+    padding: 0px;
+    
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .registro {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .fundo {
+        display: none;
+    }
+    
+
+
+    body{
+        margin: 5px;
+    }
+
+    .botao{
+        text-align: center;
+        padding: 0px;
+    }
+
+    .login {
+        width: 100%;
+    }
+    
+
+}
+
+/* Medium devices (landscape tablets) */
+@media only screen and (max-width: 768px) {
+    .fundo{
+        display:none;
+    }
+}
+
+/* Large devices (laptops/desktops) */
+@media only screen and (max-width: 992px) {
+    .registro {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .fundo {
+        display: none;
+    }
+
+
+    body{
+        margin: 5px;
+    }
+
+    .botao{
+        text-align: center;
+        padding: 0px;
+    }
+
+    .login {
+        width: 100%;;
+    }
+    
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1363px) {
+
+    .fundo{
+        display: none;
+    }
+
+}

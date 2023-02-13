@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+.menu-container {
+  background: #FFFFFC;
+  border-radius: 0px 0px 50px 50px;
+  filter: drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.25));
+}
+.menu-container .menu {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
+}
+.menu-container .menu > a {
+  text-decoration: none;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.menu-container .menu > a .UserInfo {
+  display: flex;
+  flex-direction: column;
+}
+.menu-container .menu > a .UserInfo > div {
+  gap: 0.2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.menu-container .menu > a .UserInfo > div button {
+  border: none;
+  background-color: #FFFFFC;
+  cursor: pointer;
+  display: flex;
+}
+.menu-container .menu > a .UserInfo .username {
+  font-size: 20px;
+}
+
+.img-container {
+  width: 60%;
+  margin: auto;
+  margin-top: 1.5rem;
+}
+.img-container div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.img-container div .title, .img-container div .details {
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.5rem;
+  letter-spacing: 0.15rem;
+}
+.img-container div .details {
+  text-align: center;
+}
+.img-container div div {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.img-container div .description {
+  display: flex;
+  flex-wrap: wrap;
+}
+.img-container div .Button {
+  margin-bottom: 20px;
+  border: none;
+  background: rgb(221, 96, 68);
+  border-radius: 12px;
+  padding: 1rem;
+  color: #FFFFFC;
+  width: 100%;
+  cursor: pointer;
+}
+.img-container div .Buttons {
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-top: 4rem;
+}
+.img-container div #openInvite {
+  background: #333533;
+  display: flex;
+  justify-content: center;
+  gap: 0.25rem;
+  align-items: center;
+  opacity: 0.8;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.img-container div #openInvite h2 {
+  color: #87C47D;
+}
+.img-container div button:hover {
+  opacity: 1;
+}
+.img-container div #fadeInvite, .img-container div #modalInvite {
+  transition: 0.5s;
+  opacity: 1;
+  pointer-events: all;
+}
+.img-container div #fadeInvite {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.img-container div #modalInvite {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  z-index: 10;
+  width: 1026px;
+  max-width: 90%;
+  padding: 1.2rem;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.img-container div .inviteHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  flex-direction: column;
+}
+.img-container div .inviteHeader #search-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.img-container div .inviteHeader #search-container #max-width {
+  width: 100%;
+  display: flex;
+}
+.img-container div .inviteHeader #search-container #formInvite {
+  width: 100%;
+}
+.img-container div .inviteHeader #search-container #search {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  display: flex;
+  order: 1;
+  flex-grow: 0;
+  background: #EBEBE8;
+  -webkit-padding-start: 1rem;
+          padding-inline-start: 1rem;
+}
+.img-container div #inviteBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.img-container div .friendsButtons {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-height: 300px;
+  overflow-y: scroll;
+}
+.img-container div .Friend {
+  display: flex;
+  background-color: #DD6044;
+  width: 100%;
+  border: none;
+  height: 5rem;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  cursor: pointer;
+}
+.img-container div .Friend span {
+  color: #FFF7F7;
+}
+.img-container div .Friend h2 {
+  color: #FFF7F7;
+}
+.img-container div #modalInvite.hideInvite,
+.img-container div #fadeInvite.hideInvite {
+  opacity: 0;
+  pointer-events: none;
+}
+.img-container div #modalInvite.hideInvite {
+  top: 0;
+}
+
+#friends-title {
+  text-align: center;
+}/*# sourceMappingURL=index.css.map */

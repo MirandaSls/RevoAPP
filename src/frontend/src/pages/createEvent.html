@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/user/index.css">
+    <link rel="stylesheet" href="../styles/createEvent/style.css">
+    <link rel="stylesheet" href="../styles/createEvent/styleButton.css">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+
+    <title>Create Event | RevoAPP</title>
+</head>
+
+
+<body>
+    <div class="menu-container">
+        <header class="content">
+            <a href="./home.html">
+                <img src="../assets/Logo.png" alt="Logo">
+            </a>
+            <a href="./user.html">
+                <div id="user-info">
+                    <h4 id="username">DJ Kevin</h4>
+                    <div>
+                        <span id="friend">
+                            32
+                        </span>
+                        <img src="../assets/Friends.png" alt="pessoinha">
+                    </div>
+                </div>
+                <img src="../assets/Profile.png" alt="Perfil_mini">
+            </a>
+        </header>
+    </div>
+
+    <main class="container">
+
+        <h2 class="info">Digite as informaçõoes do evento:</h2>
+        <div class="login">
+            <form class="form">
+                <div class="normal">
+                    <label for="nomeUser">Nome:</label>
+                    <input type="text" name="nome" id="nome" class="inputNormal">
+                </div>
+                <div>
+                    <label for="desc">Descrição:</label>
+                    <textarea name="desc" id="desc" cols="30" rows="10" class="desc"></textarea>
+                </div>
+
+                <div class="divGrande">
+                    <div class="arruma">
+                        <label for="data">Data:</label>
+                        <input class="inputShort" type="date" id="data" name="data">
+                    </div>
+                    <div class="arruma">
+                        <label for="time">Horário:</label>
+                        <input class="inputShort" type="time" id="hour" name="hour">
+                    </div>
+                </div>
+
+                <div class="normal">
+                    <label for="local">Local:</label>
+                    <input class="inputNormal" type="text" name="local" id="local">
+                </div>
+                <div class="normal">
+                    <label for="telefone">Telefone:</label>
+                    <input class="inputNormal" type="text" name="tel" id="tel">
+                </div>
+
+                <div class="divGrande">
+                    <div class="arruma">
+                        <label for="number">Monetária:</label>
+                        <input class="inputShort" type="number" id="money" name="money">
+                    </div>
+                    <div class="arruma">
+                        <label for="material">Material (Exemplo: item, item2, ...):</label>
+                        <input class="inputShort" type="text" name="material" id="material">
+                    </div>
+                </div>
+
+                <div class="tipoEvento">
+                    <div class="publico">
+                        <h3>Privado</h3>
+                    </div>
+                    <input type="checkbox" id="toggle" />
+                    <label for="toggle" class="typeButton"></label>
+                    <div class="privado">
+                        <h3>Público</h3>
+                    </div>
+                </div>
+
+                <div class="normal">
+                    <input type="button" value="Criar" id="button" onclick="criar()">
+                </div>
+
+
+            </form>
+
+        </div>
+    </main>
+
+    <script src="../scripts/createEvent/index.js"></script>
+</body>
+
+</html>

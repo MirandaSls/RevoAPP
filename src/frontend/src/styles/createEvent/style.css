@@ -1,0 +1,95 @@
+.container {
+    display: flex;
+}
+
+body {
+    background: #FFF7F7;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.inputNormal {
+
+    text-align: center;
+    background: rgba(51, 53, 51, 0.1);
+    border-radius: 10px;
+
+}
+
+.inputShort {
+
+    text-align: center;
+    background: rgba(51, 53, 51, 0.1);
+    border-radius: 10px;
+    width: 100%;
+    
+}
+
+.divGrande {
+    text-align: center;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.login {
+    width: 100%;
+}
+
+.arruma {
+    max-width: 416px;
+    width: 100%; 
+
+}
+
+.desc {
+
+    background: rgba(51, 53, 51, 0.1);
+    border-radius: 10px;
+
+}
+
+.normal {
+    text-align: center;
+}
+
+.tipo {
+
+    border-radius: 50px;
+}
+
+.type {
+    text-align: center;
+}
+
+.info {
+    margin-top: 70px;
+}
+
+#button {
+    background: #DD6044;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+
+}
+
+.tipoEvento {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.privado {
+    color: #87C47D;
+}
+.publico {
+    color: #E58671;
+}
+
